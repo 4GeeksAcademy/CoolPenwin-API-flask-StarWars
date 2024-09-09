@@ -7,8 +7,8 @@ Create flask API's in minutes, [📹 watch the video tutorial](https://youtu.be/
 - [Extensive documentation here](https://start.4geeksacademy.com).
 - Integrated with Pipenv for package managing.
 - Fast deloyment to render.com or heroku with `$ pipenv run deploy`.
-- Use of `.env` file.
-- SQLAlchemy integration for database abstraction.
+- Use of `.env` file
+- SQLAlchemy integration for database abstraction
 
 ## 1) Installation
 
