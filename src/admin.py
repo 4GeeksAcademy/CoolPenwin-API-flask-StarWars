@@ -1,6 +1,7 @@
 import os
 from flask_admin import Admin
-from models import db, User,Starships,Characters,Species,Films,Liked
+from models import db, Users, Planets, Characters, Vehicles, Favorite_Planet, Favorite_Character, Favorite_Vehicle
+# User,Starships,Characters,Species,Films,Liked
 from flask_admin.contrib.sqla import ModelView
 
 def setup_admin(app):
@@ -10,12 +11,20 @@ def setup_admin(app):
 
     
     # Add your models here, for example this is how we add a the User model to the admin
-    admin.add_view(ModelView(User, db.session))
+    admin.add_view(ModelView(Users, db.session))
+    admin.add_view(ModelView(Planets, db.session))
     admin.add_view(ModelView(Characters, db.session))
-    admin.add_view(ModelView(Starships, db.session))
-    admin.add_view(ModelView(Species, db.session))
-    admin.add_view(ModelView(Films, db.session))
-    admin.add_view(ModelView(Liked, db.session))
+    admin.add_view(ModelView(Vehicles, db.session))
+    admin.add_view(ModelView(Favorite_Planet, db.session))
+    admin.add_view(ModelView(Favorite_Character, db.session))
+    admin.add_view(ModelView(Favorite_Vehicle, db.session))
+
+    # admin.add_view(ModelView(User, db.session))
+    # admin.add_view(ModelView(Characters, db.session))
+    # admin.add_view(ModelView(Starships, db.session))
+    # admin.add_view(ModelView(Species, db.session))
+    # admin.add_view(ModelView(Films, db.session))
+    # admin.add_view(ModelView(Liked, db.session))
 
     # You can duplicate that line to add mew models
     # admin.add_view(ModelView(YourModelName, db.session))
